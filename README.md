@@ -9,7 +9,7 @@ The system employs a **dual-layer protection matrix** to intercept both aggressi
 #### 1. Volumetric Layer (The $1.5\times$ Safety Net)
 During the training phase, the system automatically benchmarks the historical peak of your network activity and establishes a hard cap:
 
-$$\text{Volume Threshold} = \max(\text{window}_{\text{total\_events}}) \times 1.5$$
+$$\text{Volume Threshold} = \max(\text{window total events}) \times 1.5$$
 
 * **Target:** Noisy, automated high-velocity brute force (e.g., Hydra, Medusa).
 * **Behavior:** If a 30-second window exceeds this limit, **Process 4 triggers an instant alert**, bypassing the AI evaluation to save computing power and guarantee immediate notification.
@@ -88,5 +88,4 @@ python3 -m src.main
 
   
 # Architecture
-
-![Architecture Diagram](./image_aa15b4.png)
+![Architecture](https://github.com/Emanuel-Yudica/Anomaly-detection-AD/blob/dev/architecture.jpg)
