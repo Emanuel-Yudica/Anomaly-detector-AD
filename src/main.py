@@ -11,7 +11,7 @@ from src.anomaly_detector import ml_evaluator_worker
 # CONFIGURATION SWITCH                                                                                                |          
 # True  -> Collects data and saves it into 'security_dataset.csv'(you must run this if it is your first time running).|
 # False -> Switches to live AI Anomaly Detection mode                                                                 |
-TRAINING_MODE = False  #                                                                                              |
+TRAINING_MODE = True  #                                                                                              |
 #----------------------------------------------------------------------------------------------------------------------
 
 
