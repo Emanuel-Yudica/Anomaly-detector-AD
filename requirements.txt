@@ -1,0 +1,6 @@
+pywin32
+redis
+numpy
+pandas
+scikit-learn
+joblib
