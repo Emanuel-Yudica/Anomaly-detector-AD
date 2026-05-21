@@ -20,6 +20,11 @@ Looks for **unfamiliar patterns**. By training on a full week of data, the Isola
 * **Target:** Lateral movement, compromised credentials, and out-of-hours insider threats.
 * **Behavior:** If a window contains perfectly low traffic volume but introduces **anomalous features**—such as an administrator logging in at 3:00 AM on a Sunday, or activity originating from a completely new IP address—the AI isolates this vector. Since this coordinate doesn't fit the historical "cloud" of normal data, the model returns a `-1` score.
 
+Here is an example of the decision tree of the ML
+
+![Decision tree](https://github.com/Emanuel-Yudica/Anomaly-detector-AD/blob/dev/model_decision_tree_example.png)
+
+
 | Detection Type | Volumetric Rule ($1.5\times$) | Isolation Forest (AI) | Trigger Example |
 | :--- | :---: | :---: | :--- |
 | **Volumetric Flood** | 🚨 Breached | — (Bypassed) | 2,000 requests in 30 seconds. |
