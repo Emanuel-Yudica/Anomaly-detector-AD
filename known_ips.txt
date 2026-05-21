@@ -1,3 +1,5 @@
+# [!] HERE IS AN EXAMPLE OF THE FILE STRUCTURE [!]
+
 # --- Local infrastructure ---
 127.0.0.1
 ::1
