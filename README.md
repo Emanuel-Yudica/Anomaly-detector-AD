@@ -60,13 +60,17 @@ python3 -m venv venv
 python3 -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
-3. Collect Baseline Data (Run with TRAINING_MODE = True in main.py)
+3. Run redis server
+```bash
+redis-server
+```
+4. Collect Baseline Data (Run with TRAINING_MODE = True in main.py)
 
 Let this run to populate your security_dataset.csv file, then stop it with Ctrl+C
 ```bash
 python3 -m src.main.py
 ```
-4. Train the Isolation Forest model and generate the .pkl brain file
+5. Train the Isolation Forest model and generate the .pkl brain file
 ```bash
 python3 src/train.py
 ```
@@ -86,6 +90,11 @@ Use this section for daily monitoring once you have already populated your `know
 ```python
  .\venv\Scripts\Activate.ps1
  ```
+* Run redis server
+```python
+ redis-server
+ ```
+  
 * Execute main
 ```python
 python3 -m src.main
