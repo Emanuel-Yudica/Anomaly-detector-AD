@@ -74,9 +74,16 @@ if __name__ == "__main__":
         Process(target=feature_builder, args=(TRAINING_MODE, vector_queue)),
     ]
 
+    MODEL_PATH="anomaly_detector.pkl"
     if not TRAINING_MODE:
+        if not os.path.exists(MODEL_PATH):
+            print("\n" + "="*60)
+            print("🚨 CRITICAL ERROR: AI Model file not found!")
+            print(f"Missing file: '{MODEL_PATH}'")
+            print("Please run 'python src/train.py' first to compile the model.")
+            print("="*60 + "\n")
+            sys.exit(1)
         procs.append(
-            # P4: IA Evaluation Engine (Escucha de forma reactiva la cola del P3)
             Process(target=ml_evaluator_worker, args=(vector_queue,))
         )
 
